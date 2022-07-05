@@ -1,0 +1,31 @@
+.Wrraper{
+  position: relative;
+  display: inline-block;
+  width: 240px;
+}
+.Wrraper > * {
+  background-color: var(--secondaryBg);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.dropDown{
+  position: absolute;
+  margin-top: 10px;
+  width: 240px;
+  max-height: 200px;
+  
+  z-index: 2;
+  overflow-y: auto;
+}
+.dropDown option{
+  font-size: 14px;
+  padding: 7.5px 20px;
+  cursor: pointer;
+}
+.dropDown option:not(:last-child){
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+}
+.dropDown option:hover,
+.dropDown option.selected{
+  background-color: var(--primaryBg);
+}

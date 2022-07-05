@@ -1,0 +1,59 @@
+.Button {
+  position: relative;
+  height: 45px;
+  padding: 0 20px;
+  font-size: var(--fontSizeMd);
+
+  border: none;
+  border-radius: 5px;
+
+  background: var(--secondaryBg);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.Button.small {
+  height: 36px;
+  padding: 0 16px;
+  font-size: var(--fontSizeSm);
+}
+.Button.large {
+  height: 54px;
+  padding: 0 24px;
+  font-size: var(--fontSizeLg);
+}
+
+.Button.success {
+  background-color: var(--success);
+}
+.Button.success:hover {
+  background-color: var(--successOpacity75);
+}
+.Button.success,
+.Button.success * {
+  color: white;
+  fill: white;
+}
+.Button.error {
+  background-color: var(--error);
+}
+.Button.error:hover {
+  background-color: var(--error);
+}
+.Button.error,
+.Button.error * {
+  color: white;
+  fill: white;
+}
+
+.Button svg,
+.Button img {
+  width: 20px;
+  height: 20px;
+}

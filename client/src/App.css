@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;700&display=swap');
+
+*{
+  direction: rtl;
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  color: var(--primaryColor);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray; 
+}
+
+@media (max-width: 991px) {
+  :root {
+    --fontSizeMdLg: 10px;
+  }
+}
+
+:root{
+  --fontSizeLg: 1.2rem;
+
+  --fontSizeMd: 16px;
+  --fontSizeSm: 12px;
+  --fontSizeMdLg: 18px;
+
+  --successOpacity25: rgba(43, 43, 190, 0.25);
+  --successOpacity50: rgba(43, 43, 190, 0.50);
+  --successOpacity75: rgba(43, 43, 190, 0.75);
+  --success: rgba(43, 43, 255, 1);
+
+  --errorOpacity25: rgba(190, 43, 43, 0.25);
+  --errorOpacity50: rgba(190, 43, 43, 0.50);
+  --errorOpacity75: rgba(190, 43, 43, 0.75);
+  --error: rgba(190, 43, 43, 1);
+}
+body{
+  background-color: var(--primaryBg);
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+.app-container{
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}

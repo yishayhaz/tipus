@@ -1,0 +1,155 @@
+.Container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Form{
+  margin: 50px 0;
+  background-color: var(--secondaryBg);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px 30px 30px;
+  border-radius: 5px;
+  width: 510px;
+  max-width: calc(95% - 60px);
+  display: flex;
+  flex-direction: column;
+}
+.Headline{
+  text-align: center;
+  font-weight: 500;
+}
+.Inputs{
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 640px){
+  .Form{
+    padding: 15px 20px 30px 20px;
+  }
+  .Inputs{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.TextAreaGroup {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.SliderCont {
+    margin-top:10px;
+  }
+
+  label {
+    font-size: var(--fontSizeSm);
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+  textarea {
+    position: relative;
+    max-width: 100%;
+    width: auto;
+    height: 75px;
+    padding: 10px 10px 25px 10px;
+    resize: none;
+  }
+  span {
+    position: absolute;
+    top: calc(100% - 20px);
+    left: 10px;
+    font-size: var(--fontSizeSm);
+    color: var(--primaryColor);
+    cursor: pointer;
+  }
+  .Slider {
+    position: relative;
+    width: 90%;
+    margin: 0 7.5%;
+    height: 25px;
+  }
+  .Label {
+    display: grid;
+    place-items: center;
+
+    svg {
+      width: 20px !important;
+    }
+  }
+}
+.InputGroup{
+  position: relative;
+  height: 80px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+
+  label{
+    font-size: var(--fontSizeSm);
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+}
+.btn{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.error{
+  font-size: var(--fontSizeSm);
+  color: var(--error);
+}
+
+.Salary {
+  width: 100%;
+  margin-top: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+
+  .Headline {
+    width: 100%;
+    text-align: center;
+  }
+  .Option {
+    max-width: 45%;
+    font-size: var(--fontSizeSm);
+    cursor: pointer;
+
+    padding: 10px 5px;
+
+    label {
+      cursor: pointer;
+    }
+    input:checked ~ label {
+      font-weight: bold;
+    }
+    input {
+      all: unset;
+      display: inline-block;
+      width:10px;
+      height:10px;
+      border: 1px solid var(--primaryColor);
+      border-radius: 50%;
+      margin-left: 5px;
+      margin-bottom: -2px;
+      cursor: pointer;
+
+      &:checked {
+        background-color: var(--primaryColor);
+      }
+    }
+  }
+}

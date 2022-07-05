@@ -1,0 +1,34 @@
+.Tag{
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  font-size: var(--fontSizeSm);
+  border-radius: 2px;
+  padding: 5px 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+.Tag svg{
+  width: 15px;
+}
+.Tag{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.Tag.success{
+  background-color: var(--successOpacity25);
+}
+.Tag.success,
+.Tag.success *{
+  color: var(--success);
+  fill: var(--success);
+}
+.Tag.error{
+  background-color: var(--errorOpacity25);
+}
+.Tag.error, .Tag.error * {
+  color: var(--error);
+  fill:var(--error);
+}

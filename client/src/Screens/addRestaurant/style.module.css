@@ -1,0 +1,76 @@
+.Container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Form{
+  margin: 50px 0;
+  background-color: var(--secondaryBg);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px 30px 30px;
+  border-radius: 5px;
+  width: 510px;
+  max-width: calc(95% - 60px);
+  display: flex;
+  flex-direction: column;
+}
+.Headline{
+  text-align: center;
+  font-weight: 500;
+}
+.Inputs{
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px){
+  .Form{
+    padding: 15px 20px 30px 20px;
+  }
+  .Inputs{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .InputGroup input {
+    width: calc(100% - 40px);
+  }
+  .ImgGroup{
+    display: grid;
+    place-items: center;
+  }
+}
+.InputGroup{
+  height: 80px;
+  width: 240px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ImgGroup{
+  width: 240px;
+}
+.ImgGroup img{
+  height: 50px;
+  width: 50px;
+}
+.InputGroup label{
+  font-size: var(--fontSizeSm);
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.btn{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.error{
+  font-size: var(--fontSizeSm);
+  color: var(--error);
+}

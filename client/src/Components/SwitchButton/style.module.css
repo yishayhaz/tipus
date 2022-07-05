@@ -1,0 +1,55 @@
+.btn{
+  position: relative;
+  width: 75px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0px 5px var(--primaryColor),
+              0 0px 5px rgba(0, 0, 0, 0.2);
+  background: var(--secondaryBg);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn > div:last-child{
+  margin-left: 12px;
+}
+.btn > div:nth-child(2){
+  margin-right: 12px;
+}
+.switch{
+  position: absolute;
+  top: 3px;
+
+  height: 34px;
+  width: 34px;
+  border-radius: 20px;
+  background-color: var(--primaryColor);
+
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  transition: 0.3s;
+}
+.switch.left {
+  animation: moveLeft .5s ease-in-out;
+  left: 3px;
+}
+.switch.right {
+  animation: moveRight .5s ease-in-out;
+  left: calc(100% - 37px);
+}
+@keyframes moveLeft {
+  from {
+    left: calc(100% - 37px);
+  } to {
+    left: 3px;
+  }
+}
+@keyframes moveRight {
+  from {
+    left: 3px;
+  } to {
+    left: calc(100% - 37px);
+  }
+}

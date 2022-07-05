@@ -1,0 +1,282 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container{
+  margin-top: 40px;
+  @include flex-center;
+  flex-direction: column;
+}
+.Container > div{
+  width: 450px;
+  max-width: 80%;
+}
+.Headline{
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.Headline_content{
+  @include flex-center;
+  flex-direction: column;
+}
+.Headline svg{
+  width: 25px !important;
+  height: 25px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.Headline svg:hover{
+  margin-top: -5px;
+}
+.Logo > div{
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.Tag{
+  margin: 20px 0;
+  @include flex-center;
+  gap: 5px;
+
+  & > svg {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+  & > svg path{
+    fill: var(--primaryColor);
+  }
+}
+
+.Content {
+  @include flex-center;
+}
+.Dates {
+  @include flex-center;
+  justify-content: space-between !important;
+  // gap: 40px;
+}
+.Dates > div{
+  @include flex-center;
+  gap: 10px;
+
+  svg{
+    width: 25px;
+    height: 25px;
+    fill: var(--primaryColor);
+  }
+}
+
+.Comments {
+  margin-top: 20px;
+  @include flex-center;
+  flex-direction: column;
+  gap: 20px;
+  
+  width: 550px !important;
+  
+  .empty{
+    @include flex-center;
+    padding: 20px 0;
+
+    svg {
+      height: 200px;
+      max-width: 100%;
+    }
+  }
+  & > div:not(.empty){
+    background: var(--secondaryBg);
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 10px;
+
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  }
+  .Comments_head{
+    width: 100%;
+  
+    @include flex-center;
+    justify-content: space-between;
+
+    .Comments_head_title h2{
+      font-size: var(--fontSizeMd);
+    }
+  }
+
+  .Comments_card {
+    @include flex-center;
+    flex-direction: column;
+
+    .Info {
+      @include flex-center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+
+      & > div {
+        @include flex-center;
+        gap: 10px;
+        
+        & > h3 {
+          font-size: var(--fontSizeMdLg);
+        }
+        & > span {
+          font-size: var(--fontSizeSm);
+        }
+      }
+      .rates {
+        div:last-child {
+          @include flex-center;
+          width: 90px;
+          justify-content: flex-start;
+        }
+      }
+    }
+    @media (max-width: 630px) {
+      .Info {
+        align-items: center;
+        gap: 10px;
+
+        &>div:first-child{
+          width: 100%;
+          justify-content: space-between;
+        }
+        .rates {
+          width: 100%;
+          @include flex-center;
+          flex-direction: column;
+
+          &>*:last-child div{
+            @include flex-center;
+          }
+        }
+      }
+    }
+    .Content {
+      position: relative;
+      margin-top: 20px;
+
+      @include flex-center;
+      align-items: flex-start;
+      gap: 10px;
+
+      cursor: pointer;
+
+      .msg {
+        width: 95%;
+
+        p{
+          color: var(--primaryColor);
+          font-weight: 300;
+          opacity: 0.8;
+          overflow: hidden;
+        }
+        p.large {
+          animation: large 1s ease-in;
+        }
+        p.short {
+          background: -webkit-linear-gradient(var(--primaryColor), var(--primaryBg));
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          max-height: 50px;
+        }
+        @keyframes large {
+          from {
+            max-height: 50px;
+          } to {
+            max-height: 1000px;
+          }
+        }
+      }
+      .actions {
+        position: relative;
+        @include flex-center;
+  
+        svg {
+          height: 15px;
+          width: 15px;
+          padding: 7.5px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: .5s;
+  
+          &:hover {
+            background: var(--primaryBg);
+          }
+          path {
+            fill: var(--primaryColor)
+          }
+        }
+      }
+      .dropDown{
+        position: absolute;
+        top: 25px;
+
+        border-radius: 5px;
+
+        background: var(--secondaryBg);
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+
+        button {
+          position: relative;
+          width: 100%;
+          padding: 7.5px 15px;
+          
+          border: none;
+          border-radius: 5px;
+
+          background: var(--secondaryBg);
+          color: var(--primaryColor);
+
+          cursor: pointer;
+          transition: .5s;
+
+          @include flex-center;
+          justify-content: space-evenly;
+          gap: 10px;
+
+          &:hover{
+            background: var(--error);
+          }
+          svg {
+            all: unset;
+            width: 15px;
+          }
+        }
+      }
+      .collapse {
+        position: absolute;
+        top:100%;
+        left: calc(50% - 10px);
+        z-index: 5;
+        transform: translateX(-50%);
+      
+        width: 15px;
+        height: 15px;
+        padding: 5px;
+      
+        border-radius: 50%;
+      
+        @include flex-center;
+      
+        background:var(--primaryColor);
+        
+        box-shadow: 0 0 15px rgba(0,0,0,.25);
+        transition: .5s;
+      
+        svg {
+          width: 15px;
+          height: 15px;
+          path {
+            fill: var(--primaryBg);
+          }
+        }
+      }
+    }
+  }
+}

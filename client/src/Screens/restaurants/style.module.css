@@ -1,0 +1,35 @@
+.container {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.filter {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Empty svg:first-child {
+  margin-bottom: 30px;
+  height: 200px;
+  max-width: 100%;
+}
+.LoadMore {
+  display: grid;
+  place-items: center;
+}
+.LoadMore a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--success);
+}

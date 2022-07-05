@@ -1,0 +1,19 @@
+.Input, .TextArea{
+  height: 35px;
+  width: 200px;
+  padding: 5px 20px;
+
+  background-color: var(--secondaryBg);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.error{
+  box-shadow: 0 0 2px rgb(190, 43, 43);
+}
+.success{
+  box-shadow: 0 0 2px rgb(43, 53, 190);
+}
